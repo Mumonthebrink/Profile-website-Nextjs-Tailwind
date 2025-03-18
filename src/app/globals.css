@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dyslexie:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --font-heading: 'Dyslexie', sans-serif;
+  --font-heading: 'Geist', sans-serif;
   --font-body: 'Dyslexie', sans-serif;
-  --font-ui: 'Geist', sans-serif;
-  --color-primary: #005F73;
+  --font-ui: 'Dyslexie', sans-serif;
+  --color-primary: #008080;
   --color-secondary: #FFFFFF;
   --color-dark-bg: #0F172A;
   --color-light-bg: #F8FAFC;
@@ -12,16 +14,21 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-html {
-  background: url('/assets/images/mycelium-ai-background.png') no-repeat center center fixed;
-  background-size: cover;
-  transition: background-color 0.3s ease-in-out;
-}
-
+html, body {
+    background-color: var(--color-light-bg); /* Ensure a fallback */
+    background-image: url('/assets/images/sustainabletechmycelium.webp');
+    background-size: stretch;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-color 0.3s ease-in-out;
+    opacity: 0.8;
+  }
+  
 .dark-mode {
   background-color: var(--color-dark-bg);
 }
