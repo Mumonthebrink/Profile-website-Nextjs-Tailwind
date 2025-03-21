@@ -1,59 +1,94 @@
+/* Base font import */
 @import url('https://fonts.googleapis.com/css2?family=Dyslexie:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --font-heading: 'Geist', sans-serif;
-  --font-body: 'Dyslexie', sans-serif;
-  --font-ui: 'Dyslexie', sans-serif;
-  --color-primary: #008080;
-  --color-secondary: #FFFFFF;
-  --color-dark-bg: #0F172A;
-  --color-light-bg: #F8FAFC;
-  --animation-fade-in: fadeIn 0.8s ease-in-out;
-} 
+  --font-body: 'Geist', sans-serif;
+  --font-ui: 'Geist', sans-serif;
+  --color-primary: #FFFFFF; /* White text for readability */
+  --color-secondary: #98F5F7; /* Cyan accent color */
+  --color-accent: #DC2556; /* Accent color */
+  --color-gunmetal: #2A3439; /* Gunmetal */
+  --color-dark-bg: #2A3439; /* Gunmetal background */
+  --color-light-bg: #FFFFFF;
+  --color-dark-font: #FFFFFF; /* White font on gunmetal */
+  --color-light-font: #2A3439; /* Dark font for light mode */
+  --animation-fade-in: fadeIn 1s ease-in-out;
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Global background and text color */
 html, body {
-    background-color: var(--color-light-bg); /* Ensure a fallback */
-    background-image: url('/assets/images/sustainabletechmycelium.webp');
-    background-size: stretch;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    transition: background-color 0.3s ease-in-out;
-    opacity: 0.8;
-  }
+  background-color: #2A3439 !important; /* Gunmetal background color */
+  color: #FFFFFF !important; /* White text on gunmetal background */
+  font-family: 'Dyslexie', sans-serif; /* Ensure the font is set */
+  margin: 0; /* Remove default margin to avoid extra space around the page */
+  padding: 0; /* Remove default padding to avoid unwanted space */
+  height: 100%; /* Ensure the page takes full height */
   
-.dark-mode {
-  background-color: var(--color-dark-bg);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition for smooth color change */
 }
 
+/* Remove any borders or padding from the main content */
 body {
-  color: var(--color-primary);
-  background-color: white;
-  font-family: var(--font-body);
+  background-color: #2A3439; /* Gunmetal background */
+  color: #FFFFFF; /* White text */
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #111827;
-    color: white;
+/* Ensure sections have consistent background color */
+section {
+  background-color: #2A3439; /* Gunmetal background for sections */
+  color: #FFFFFF; /* White text */
+}
+
+/* Apply gunmetal color for navbar */
+nav {
+  background-color: #2A3439; /* Gunmetal navbar background */
+  color: #FFFFFF; /* White text for navbar */
+}
+
+/* Hover effect for links and buttons */
+button:hover, a:hover {
+  background-color: #DC2556; /*  hover effect */
+  color: #2A3439; /* Gunmetal text when hovered */
+}
+a:hover {
+  background-color: #98F5F7; /* Light cyan hover effect */
+  color: #2A3439; /* Gunmetal text when hovered */
+}
+
+
+/* Section background adjustments for consistency */
+section {
+  background-color: #2A3439; /* Gunmetal background */
+  color: #FFFFFF; /* White text */
+}
+
+/* Button Hover Effects */
+button:hover, .hover\:bg-accent-blue:hover {
+  background-color: var(--color-secondary); /* Cyan hover color */
+  color: var(--color-dark-bg); /* Gunmetal text color */
+}
+
+/* Link Hover Effects */
+a:hover {
+  color: var(--color-secondary); /* Cyan on hover */
+}
+/* Smooth transitions */
+html, body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* fade image edges*/
+@layer utilities {
+  .mask-fade {
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
   }
 }
-/* =======
-/* @import url('https://fonts.googleapis.com/css2?family=Dyslexie:wght@400;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
-@import 'tailwindcss'; */
-
-
-/* body {
-  font-family: var(--font-body);
-  color: var(--color-primary);
-}
->>>>>>> pages-setup */

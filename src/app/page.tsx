@@ -1,22 +1,21 @@
 import React from 'react';
-import MainLayout from '@/components/layout/MainLayout';
-import HeroSection from '@/components/sections/home/HeroSection';
-import ImpactStatement from '@/components/sections/home/ImpactStatement';
-import ServicesSection from '@/components/sections/home/ServicesSection';
-import ProjectShowcase from '@/components/sections/home/ProjectShowcase';
-import BlogTeaser from '@/components/sections/home/BlogTeaser';
-import FinalCTA from '@/components/sections/home/FinalCTA';
+import HeroSection from 'src/app/home/HeroSection';
+import ImpactStatement from 'src/app/home/ImpactStatement';
+import ServicesSection from 'src/app/home/ServicesSection';
+import ProjectShowcase from 'src/app/home/ProjectShowcase';
+import BlogTeaser from 'src/app/home/BlogTeaser';
+import FinalCTA from 'src/app/home/FinalCTA';
 
 const Home = () => {
   return (
-    <MainLayout>
+    <>
       <HeroSection />
       <ImpactStatement />
       <ServicesSection />
       <ProjectShowcase />
       <BlogTeaser />
       <FinalCTA />
-    </MainLayout>
+      </>
   );
 };
 

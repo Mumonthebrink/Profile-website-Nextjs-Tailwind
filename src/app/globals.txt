@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Dyslexie:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'Geist', sans-serif;
+  --font-body: 'Dyslexie', sans-serif;
+  --font-ui: 'Dyslexie', sans-serif;
+  --color-primary: #FFFFFF;
+  --color-secondary: #98F5F7;
+  --color-accent: #D6C255;
+  --color-dark-bg: #2A3439;
+  --color-light-bg: #FFFFFF;
+  --animation-fade-in: fadeIn 0.8s ease-in-out;
+} 
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html, body {
+    background-color: var(--color-dark-bg); /* Ensure a fallback */
+    /* background-image: url('/assets/images/sustainabletechmycelium.webp'); */
+    /* background-size: stretch;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    transition: background-color 0.3s ease-in-out;
+    opacity: 0.8;
+  }
+  
+.dark-mode {
+  background-color: var(--color-dark-bg);
+}
+html {
+  background-color: #02a3439; /* Default dark background color */
+}
+body {
+  color: white; /* Text color for dark mode */
+}
+
+body {
+  color: var(--color-primary);
+  background-color: white;
+  font-family: var(--font-body);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2a3439;
+    color: white;
+  }
+}
+/* =======
+/* @import url('https://fonts.googleapis.com/css2?family=Dyslexie:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
+@import 'tailwindcss'; */
+
+
+/* body {
+  font-family: var(--font-body);
+  color: var(--color-primary);
+}
+>>>>>>> pages-setup */
+
+
+
+/* --gunmetal: #2a3439ff;
+--raspberry: #DC2556ff;
+--caribbean-current: #0C6E6Eff;
+--davys-gray: #575757ff;
+--ice-blue: #98F5F7ff; */
+/* 
+
+{ 'gunmetal': { DEFAULT: '#2a3439', 100: '#080a0b', 200: '#101416', 300: '#191f21', 400: '#21292d', 500: '#2a3439', 600: '#4c5e67', 700: '#708996', 800: '#a0b1b9', 900: '#cfd8dc' }, 
+'raspberry': { DEFAULT: '#DC2556', 100: '#2c0711', 200: '#580e22', 300: '#841533', 400: '#af1d44', 500: '#dc2556', 600: '#e25077', 700: '#ea7b99', 800: '#f1a7bb', 900: '#f8d3dd' }, 
+'caribbean_current': { DEFAULT: '#0C6E6E', 100: '#021616', 200: '#052c2c', 300: '#074242', 400: '#0a5858', 500: '#0c6e6e', 600: '#14b4b4', 700: '#2ee8e8', 800: '#73efef', 900: '#b9f7f7' }, 
+'davy's_gray': { DEFAULT: '#575757', 100: '#111111', 200: '#232323', 300: '#343434', 400: '#454545', 500: '#575757', 600: '#787878', 700: '#9a9a9a', 800: '#bcbcbc', 900: '#dddddd' }, 
+'ice_blue': { DEFAULT: '#98F5F7', 100: '#06494a', 200: '#0b9294', 300: '#11dbde', 400: '#4deff2', 500: '#98f5f7', 600: '#acf7f9', 700: '#c0f9fa', 800: '#d5fbfc', 900: '#eafdfd' } }
+/*  */
+/* - CSV
+2a3439,DC2556,0C6E6E,575757,98F5F7
+
+- With #
+#2a3439, #DC2556, #0C6E6E, #575757, #98F5F7
+
+- Array
+["2a3439","DC2556","0C6E6E","575757","98F5F7"]
+
+- Object
+{"Gunmetal":"2a3439","Raspberry":"DC2556","Caribbean Current":"0C6E6E","Davy's gray":"575757","Ice blue":"98F5F7"}
+
+- Extended Array
+[{"name":"Gunmetal","hex":"2a3439","rgb":[42,52,57],"cmyk":[26,9,0,78],"hsb":[200,26,22],"hsl":[200,15,19],"lab":[21,-3,-5]},{"name":"Raspberry","hex":"DC2556","rgb":[220,37,86],"cmyk":[0,83,61,14],"hsb":[344,83,86],"hsl":[344,72,50],"lab":[49,69,20]},{"name":"Caribbean Current","hex":"0C6E6E","rgb":[12,110,110],"cmyk":[89,0,0,57],"hsb":[180,89,43],"hsl":[180,80,24],"lab":[42,-25,-7]},{"name":"Davy's gray","hex":"575757","rgb":[87,87,87],"cmyk":[0,0,0,66],"hsb":[0,0,34],"hsl":[0,0,34],"lab":[37,0,0]},{"name":"Ice blue","hex":"98F5F7","rgb":[152,245,247],"cmyk":[38,1,0,3],"hsb":[181,38,97],"hsl":[181,86,78],"lab":[91,-27,-10]}] */ */
