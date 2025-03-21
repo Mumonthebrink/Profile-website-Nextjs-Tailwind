@@ -36,9 +36,8 @@ monika-roozen-profile/ ├── src/ │ ├── app/ # Main application page
 ---
 |
 
----
-
 ## 🌐 Live Preview
+
 
 **Coming Soon** – Deployed on [Vercel](https://vercel.com/) (or [DigitalOcean](https://www.digitalocean.com/), if configured).
 
